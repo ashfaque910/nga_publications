@@ -1,0 +1,129 @@
+/* background-color: #622c5440; */
+
+.common-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: var(--bg-color);
+}
+
+.common-content {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1200px;
+  width: 100%;
+
+  flex-wrap: wrap; /*Ensure items wrap on smaller screens*/
+}
+
+/* Study Material and Test Series Cards */
+/* .common-study-material{
+  max-width:50%;
+  box-shadow: var(--box-shadow);
+  transition: transform var(--transition-time) ease;
+  border: 1px solid #2e6982;
+  border-radius: var(--border-radius);
+  background: linear-gradient(to bottom, #c3e6ec49, #a7d1d9e0); /*Add transparency*/
+ /* margin: 20px;
+  padding: var(--padding);
+  
+} */
+ .common-study-material, 
+.common-test-series {
+  margin: 20px;
+  padding: var(--padding);
+  width: 40%;
+  /* height: 90%; */
+  /* background-color: #622c5440; */
+  border: 1px solid #2e6982;
+  /* background: linear-gradient(to right, #c3e6ec49, #a7d1d9e0); Add transparency */
+  /* box-shadow: var(--box-shadow); */
+  /* transition: transform var(--transition-time) ease; */
+  border-radius: var(--border-radius);
+} 
+
+/* .common-study-material:hover,
+.common-test-series:hover {
+  transform: scale(1.02);
+  box-shadow: var(--hover-shadow);
+} */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .common-content {
+    flex-direction: column;
+    align-items: center; /* Center align the items on smaller screens */
+  }
+
+  .common-study-material,
+  .common-test-series {
+    width: 90%; /* Take almost the full width on smaller screens */
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  /* For extra small devices like iPhones */
+  .common-container{
+    padding: 20px;
+  }
+  .common-study-material,
+  .common-test-series {
+    width: 100%; /* Full width for small screens */
+    padding: 20px;
+    margin: 10px 0;
+  }
+
+  .common-study-material h1,
+  .common-test-series h1 {
+    font-size: 1.8rem; /* Adjust font size */
+  }
+
+  .common-study-material p,
+  .common-test-series p {
+    font-size: 1rem; /* Adjust font size */
+  }
+}
+
+/* Typography */
+h1 {
+  font-family: var(--font-heading);
+}
+
+p {
+  font-family: var(--font-body);
+}
+
+/* Arrow Button */
+.arrow-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding-top: 5px;
+  padding-left: 15px;
+  transition: transform 0.2s;
+}
+
+.arrow-button:hover {
+  transform: scale(1.5);
+}
+
+.arrow-button svg {
+  color: var(--bg-secondary); /* Adjust the color as needed */
+}
+
+/* Download Link */
+.download-link {
+  display: block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  transition: background-color var(--transition-time) ease;
+}
+
+.download-link:hover {
+  background-color: var(--hover-color);
+}
