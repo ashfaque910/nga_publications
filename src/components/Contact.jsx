@@ -1,11 +1,12 @@
 // @iB#$d6xe7cMwFg
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "emailjs-com";
 
 const Contact = () => {
+  const form = useRef();
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
+    from_name: "",   // Update to match EmailJS template
+    from_email: "",  // Update to match EmailJS template
     message: "",
   });
   const [loading, setLoading] = useState(false);
@@ -16,7 +17,7 @@ const Contact = () => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
-      [name]: value,
+      [name]: value,  // This will now work with the updated field names
     }));
   };
 
@@ -28,29 +29,22 @@ const Contact = () => {
 
     const serviceId = "service_txi78pc"; // Replace with your EmailJS service ID
     const templateId = "template_6ikpk9d"; // Replace with your EmailJS template ID
-    const publicKey = "GgmW3_k4spqph1gOu";
+    const publicKey = "GgmW3_k4spqph1gOu"; // Replace with your EmailJS public key
 
-    // Prepare email params
-    const templateParams = {
-      name: formData.name,
-      email: formData.email,
-      message: formData.message,
-    };
-
-    // Send email using EmailJS
     emailjs
-      .send(serviceId, templateId, templateParams, publicKey)
+      .send(serviceId, templateId, formData, publicKey) // Send formData directly
       .then(
         (response) => {
           console.log("SUCCESS!", response.status, response.text);
           setLoading(false);
           setSuccess(true);
-          setFormData({ name: "", email: "", message: "" }); // Reset the form
+          setFormData({ from_name: "", from_email: "", message: "" });
         },
         (error) => {
-          console.log("FAILED...", error);
+          console.error("EmailJS failed...", error);
           setLoading(false);
           setError(true);
+          alert(`EmailJS error: ${error.text}. Please check your EmailJS credentials or network.`);
         }
       );
   };
@@ -71,16 +65,16 @@ const Contact = () => {
         <div className="flex flex-col lg:flex-row justify-between items-start bg-white shadow-2xl rounded-lg p-6 sm:p-8 md:p-10 lg:p-12">
           {/* Contact Form */}
           <div className="w-full lg:w-1/2 mb-8 lg:mb-0 lg:mr-8 bg-[#2E6982] shadow-xl rounded-lg p-6 sm:p-8 md:p-10">
-            <form onSubmit={handleSubmit}>
+            <form ref={form} onSubmit={handleSubmit}>
               <div className="mb-6">
-                <label className="block text-sm font-bold mb-2 text-white" htmlFor="name">
+                <label className="block text-sm font-bold mb-2 text-white" htmlFor="from_name">
                   Your Name
                 </label>
                 <input
                   type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
+                  id="from_name"
+                  name="from_name" // Changed to from_name to match EmailJS
+                  value={formData.from_name}
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2E6982] text-black"
@@ -88,14 +82,14 @@ const Contact = () => {
               </div>
 
               <div className="mb-6">
-                <label className="block text-sm font-bold mb-2 text-white" htmlFor="email">
+                <label className="block text-sm font-bold mb-2 text-white" htmlFor="from_email">
                   Your Email
                 </label>
                 <input
                   type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
+                  id="from_email"
+                  name="from_email" // Changed to from_email to match EmailJS
+                  value={formData.from_email}
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2E6982] text-black"

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
+import { Link } from 'react-router-dom';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const HomeSection = () => {
@@ -13,12 +14,17 @@ const HomeSection = () => {
             Join the N.G.A All India Test Series, the ultimate preparation platform for NEET and JEE aspirants. Our meticulously crafted test series simulates real exam conditions, providing comprehensive assessments and detailed performance analyses. With N.G.A, transform your hard work into guaranteed success and secure your place in prestigious medical and engineering institutions.
           </p>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <button className="bg-yellow-300 hover:bg-red-300 text-white py-2 sm:py-3 px-4 sm:px-6 rounded-lg text-sm sm:text-lg transition duration-300">
-              Click Here For NEET
-            </button>
-            <button className="bg-yellow-300 hover:bg-red-300 text-white py-2 sm:py-3 px-4 sm:px-6 rounded-lg text-sm sm:text-lg transition duration-300">
-              Click Here For IIT-JEE
-            </button>
+          <Link to="/neet">
+        <button className="bg-yellow-300 hover:bg-red-300 text-white py-2 sm:py-3 px-4 sm:px-6 rounded-lg text-sm sm:text-lg transition duration-300">
+          Click Here For NEET
+        </button>
+      </Link>
+
+      <Link to="/jee">
+        <button className="bg-yellow-300 hover:bg-red-300 text-white py-2 sm:py-3 px-4 sm:px-6 rounded-lg text-sm sm:text-lg transition duration-300">
+          Click Here For IIT-JEE
+        </button>
+      </Link>
           </div>
         </div>
       </div>
