@@ -1,16 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  // mode: "jit",
+  // purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   theme: {
     extend: {},
-    // colors: {
-    //   'custom-blue': '#C8FFD2', // Bluish shade
-    //   'custom-green': '#6EF278', // Greenish tint
-    // },
   },
   plugins: [],
-}
-
+};

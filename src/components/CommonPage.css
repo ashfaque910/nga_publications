@@ -10,43 +10,28 @@
 .common-content {
   display: flex;
   justify-content: space-around;
-  max-width: 1200px;
+  max-width: 1100px;
   width: 100%;
-
   flex-wrap: wrap; /*Ensure items wrap on smaller screens*/
 }
 
-/* Study Material and Test Series Cards */
-/* .common-study-material{
-  max-width:50%;
-  box-shadow: var(--box-shadow);
-  transition: transform var(--transition-time) ease;
-  border: 1px solid #2e6982;
-  border-radius: var(--border-radius);
-  background: linear-gradient(to bottom, #c3e6ec49, #a7d1d9e0); /*Add transparency*/
- /* margin: 20px;
-  padding: var(--padding);
-  
-} */
  .common-study-material, 
 .common-test-series {
-  margin: 20px;
-  padding: var(--padding);
-  width: 40%;
-  /* height: 90%; */
-  /* background-color: #622c5440; */
-  border: 1px solid #2e6982;
-  /* background: linear-gradient(to right, #c3e6ec49, #a7d1d9e0); Add transparency */
-  /* box-shadow: var(--box-shadow); */
-  /* transition: transform var(--transition-time) ease; */
+  margin: 10px;
+  padding:10px var(--padding);
+  width: 45%;
+  /* border: 1px solid #2e6982; */
+  background: #c3e6ec49; 
+  box-shadow: var(--box-shadow);
+  transition: transform var(--transition-time) ease;
   border-radius: var(--border-radius);
 } 
 
-/* .common-study-material:hover,
+.common-study-material:hover,
 .common-test-series:hover {
-  transform: scale(1.02);
+  /* transform: scale(1.02); */
   box-shadow: var(--hover-shadow);
-} */
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -102,6 +87,7 @@ p {
   padding-top: 5px;
   padding-left: 15px;
   transition: transform 0.2s;
+  
 }
 
 .arrow-button:hover {

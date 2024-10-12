@@ -6,7 +6,8 @@ import TestSeries from "./common/TestSeries";
 
 const Kcet = () => {
   return (
-    <><div className="text-center text-3xl sm:text-base md:text-xl lg:text-2xl xl:text-4xl py-6 text-yellow-400">
+    <>
+    <div className="text-center text-3xl sm:text-base md:text-xl lg:text-2xl xl:text-4xl py-6 text-yellow-400">
     <h1>KCET</h1>
   </div>
     <div className="common-container">

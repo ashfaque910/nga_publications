@@ -5,6 +5,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const HomeSection = () => {
   return (
+    <>
     <section>
       {/* Banner Section */}
       <div className=" text-white py-8 sm:py-12 md:py-16 lg:py-20 bg-[#2E6982]" >
@@ -29,6 +30,7 @@ const HomeSection = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import HomeSection from "./components/HomeSection"; // HomeSection component for home page
 import NeetPage from "./components/NeetPage"; // NeetPage component
-
 import Jee from "./components/Jee"; // Jee component
 import Kcet from "./components/Kcet"; // Kcet component
 import Foundation from "./components/Foundation";
@@ -11,17 +10,13 @@ import DownloadPage from "./components/DownloadPage"
 import Blogs from "./components/Blogs";
 import About from "./components/About";
 import Contact from "./components/Contact";
-// import StudyMaterial from "./components/common/StudyMaterial"; // NeetStudyMaterial component
-// import TestSeries from "./components/common/TestSeries"; // NeetTestSeries component
 import WhyChooseUs from "./components/WhyChooseUs"; // WhyChooseUs component
-// import Testimonials from "./components/Testimonials"; // Testimonials component
-// import Faqs from "./components/Faqs"; // Faqs component
 import Footer from "./components/Footer"; // Footer component
-import './App.css'
 import NeetStudyMaterial from "./components/studymaterialpages/NeetStudyMaterial";
 import JeeStudyMaterial from "./components/studymaterialpages/JeeStudyMaterial";
 import FoundationStudyMaterial from "./components/studymaterialpages/FoundationStudyMaterial";
 import KcetStudyMaterial from "./components/studymaterialpages/KcetStudyMaterial";
+import './App.css'
 
 const App = () => {
   return (

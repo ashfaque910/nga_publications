@@ -4,12 +4,13 @@ import FeatureCard from './FeatureCard'; // Importing FeatureCard component
 
 const WhyChooseUs = () => {
   return (
-    <section className="bg-white py-4 sm:py-4 md:py-4 lg:py-4">
+    <>
+    <section className="bg-white py-8 sm:py-4 md:py-4 lg:py-12">
       <div className="container mx-auto text-center px-4 sm:px-6 md:px-8 lg:px-16">
         <h2 className="text-3xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#2E6982] mb-8">
           Why Choose Us
         </h2>
-        <p className="text-lg sm:text-base md:text-xl lg:text-xl font-semibold text-gray-700 mb-12 max-w-3xl mx-auto">
+        <p className="text-lg sm:text-base md:text-xl lg:text-xl font-medium text-gray-700 mb-12 max-w-3xl text-[#2e6982] mx-auto">
           Our expertise and commitment to excellence provide you with the tools and support needed to achieve academic success.
         </p>
 
@@ -25,6 +26,7 @@ const WhyChooseUs = () => {
         </p>
       </div>
     </section>
+    </>
   );
 };
 
