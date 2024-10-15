@@ -6,7 +6,7 @@ const JeeStudyMaterial = () => {
       {/* JEE Study Material Section */}
       <div className="py-8 sm:py-12 md:py-16 lg:py-20" style={{ background: 'linear-gradient(135deg,#2e6982, #c3e6ec,#2e6982, #a7d1d9)'}}>
         <div className="container mx-auto text-center px-4 sm:px-6 md:px-8 lg:px-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">JEE Study Material</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold text-white mb-6">JEE Study Material</h2>
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
             Our JEE study material, endorsed by the college, provides comprehensive resources to help students excel in their JEE exams.
           </p>

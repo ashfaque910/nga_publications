@@ -1,6 +1,6 @@
 import React from "react";
 
-const AboutUs = () => {
+const About = () => {
   return (
     <section>
       {/* Banner Section */}
@@ -66,9 +66,7 @@ const AboutUs = () => {
             <p className="text-[#2E6982] text-sm sm:text-base md:text-md lg:text-xl mb-6 sm:mb-4 md:mb-8 max-w-lg sm:max-w-xl md:max-w-6xl mx-auto leading-relaxed">
               Join us in shaping the future of education. Together, we can cultivate a generation of achievers ready to conquer their goals.
             </p>
-            <button className="bg-yellow-400 hover:bg-red-300 text-white py-2 sm:py-3 px-4 sm:px-6 rounded-lg text-sm sm:text-lg transition duration-300">
-              Join Us Now
-            </button>
+            
           </div>
         </div>
       </div>
@@ -76,4 +74,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default About;

@@ -1,13 +1,14 @@
-// @iB#$d6xe7cMwFg
 import React, { useRef, useState } from "react";
 import emailjs from "emailjs-com";
 
 const Contact = () => {
   const form = useRef();
   const [formData, setFormData] = useState({
-    from_name: "",   // Update to match EmailJS template
-    from_email: "",  // Update to match EmailJS template
+    from_name: "",
+    from_email: "",
     message: "",
+    phone: "", // New field for Phone Number
+    school_college: "", // New field for School/College Name
   });
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -17,7 +18,7 @@ const Contact = () => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
-      [name]: value,  // This will now work with the updated field names
+      [name]: value,
     }));
   };
 
@@ -32,13 +33,19 @@ const Contact = () => {
     const publicKey = "GgmW3_k4spqph1gOu"; // Replace with your EmailJS public key
 
     emailjs
-      .send(serviceId, templateId, formData, publicKey) // Send formData directly
+      .send(serviceId, templateId, formData, publicKey)
       .then(
         (response) => {
           console.log("SUCCESS!", response.status, response.text);
           setLoading(false);
           setSuccess(true);
-          setFormData({ from_name: "", from_email: "", message: "" });
+          setFormData({
+            from_name: "",
+            from_email: "",
+            message: "",
+            phone: "", // Reset phone number field
+            school_college: "", // Reset school/college field
+          });
         },
         (error) => {
           console.error("EmailJS failed...", error);
@@ -73,7 +80,7 @@ const Contact = () => {
                 <input
                   type="text"
                   id="from_name"
-                  name="from_name" // Changed to from_name to match EmailJS
+                  name="from_name"
                   value={formData.from_name}
                   onChange={handleChange}
                   required
@@ -88,8 +95,40 @@ const Contact = () => {
                 <input
                   type="email"
                   id="from_email"
-                  name="from_email" // Changed to from_email to match EmailJS
+                  name="from_email"
                   value={formData.from_email}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2E6982] text-black"
+                />
+              </div>
+
+              {/* New Phone Number Section */}
+              <div className="mb-6">
+                <label className="block text-sm font-bold mb-2 text-white" htmlFor="phone">
+                  Your Phone Number
+                </label>
+                <input
+                  type="text"
+                  id="phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2E6982] text-black"
+                />
+              </div>
+
+              {/* New School/College Section */}
+              <div className="mb-6">
+                <label className="block text-sm font-bold mb-2 text-white" htmlFor="school_college">
+                  School or College Name
+                </label>
+                <input
+                  type="text"
+                  id="school_college"
+                  name="school_college"
+                  value={formData.school_college}
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2E6982] text-black"

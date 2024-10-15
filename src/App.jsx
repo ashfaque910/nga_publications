@@ -10,7 +10,6 @@ import DownloadPage from "./components/DownloadPage"
 import Blogs from "./components/Blogs";
 import About from "./components/About";
 import Contact from "./components/Contact";
-import WhyChooseUs from "./components/WhyChooseUs"; // WhyChooseUs component
 import Footer from "./components/Footer"; // Footer component
 import NeetStudyMaterial from "./components/studymaterialpages/NeetStudyMaterial";
 import JeeStudyMaterial from "./components/studymaterialpages/JeeStudyMaterial";
@@ -47,9 +46,7 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
         </Routes>
         {/* Adding reusable components to all pages */}
-        <WhyChooseUs />
-        {/* <Testimonials /> */}
-        {/* <Faqs /> */}
+ 
         <Footer />
       </div>
     </Router>

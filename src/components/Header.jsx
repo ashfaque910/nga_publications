@@ -13,13 +13,14 @@ const Header = () => {
   // Define active class with border-b based on current path
   const isActive = (path) => {
     return location.pathname === path
-      ? "border-b-2 border-green-500 text-green-700 font-semibold"
+      ? "inline-block border-b-2 md:border-b-4 xl:border-b-2 border-green-500 text-green-700 font-semibold"
       : "text-[#2E6982]";
   };
+  
 
   return (
     <>
-      <header className="p-4 bg-white shadow-md">
+      <header className="p-4 bg-white shadow-md ">
         <div className="container flex justify-between relative items-center">
           {/* Logo Section */}
           <div className="flex items-center">
@@ -34,7 +35,7 @@ const Header = () => {
             <span className="text-yellow-400 text-lg md:text-xl xl:text-2xl font-semibold">
               NGA Publications
             </span>
-            <span className="text-[#2E6982] absolute top-8 left-16 ml-2 md:top-8 md:left-14 xl:top-12 xl:left-20 font-thin py-1 md:py-0 xl:py-0">
+            <span className="text-[#2E6982] absolute top-8 left-16 ml-2 md:top-8 md:left-14 xl:top-12 xl:left-20 font-normal py-1 md:py-0 xl:py-0 font-bold">
               Your Name Our Products
             </span>
           </div>
@@ -111,7 +112,7 @@ const Header = () => {
           <div className="xl:hidden">
             <button
               onClick={toggleMenu}
-              className="text-green-900 focus:outline-none"
+              className="text-green-900 focus:outline-none bg-white"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

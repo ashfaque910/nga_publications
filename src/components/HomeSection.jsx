@@ -1,7 +1,7 @@
 import React from 'react';
-import { Carousel } from 'react-responsive-carousel';
 import { Link } from 'react-router-dom';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import WhyChooseUs from './WhyChooseUs';
 
 const HomeSection = () => {
   return (
@@ -30,6 +30,9 @@ const HomeSection = () => {
         </div>
       </div>
     </section>
+    
+    {/* whychoosus component  */}
+    <WhyChooseUs/>
     </>
   );
 };

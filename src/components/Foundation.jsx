@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import StudyMaterial from "./common/StudyMaterial";
-import TestSeries from "./common/TestSeries";
-// import DownloadPage from "./DownloadPage"; // Import the DownloadPage component
+import StudyMaterial from "./commonpages/StudyMaterial";
+import TestSeries from "./commonpages/TestSeries";
 
 const Foundation = () => {
   return (
@@ -18,7 +17,6 @@ const Foundation = () => {
                title="FOUNDATION Study Material"
                target="/foundation/foundation-study-material" 
           />
-          {/* <DownloadPage nextRoute="/download/foundation-next-material.pdf?title=Foundation Next Material" /> */}
         </div>
 
         {/* Foundation Test Series */}

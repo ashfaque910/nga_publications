@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import StudyMaterial from "./common/StudyMaterial";
-import TestSeries from "./common/TestSeries";
-// import DownloadPage from "./DownloadPage"; // Import the DownloadPage
+import StudyMaterial from "./commonpages/StudyMaterial";
+import TestSeries from "./commonpages/TestSeries";
 
 const Kcet = () => {
   return (
