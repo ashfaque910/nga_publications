@@ -1,17 +1,20 @@
-// Example using Intersection Observer API to load the image lazily
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ClickArrow from './ClickArrow';
 
 const StudyMaterial = ({ title, target }) => {
-  const [bgImage, setBgImage] = useState('');
+  const [bgImage, setBgImage] = useState(''); // Final high-resolution image
+  const [lowResImage, setLowResImage] = useState('https://img.freepik.com/free-vector/small-placeholder.jpg'); // Placeholder image
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries, observer) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setBgImage('https://img.freepik.com/free-vector/learning-concept-illustration_114360-3454.jpg');
+            const highResImage = new Image();
+            highResImage.src = 'https://img.freepik.com/free-vector/learning-concept-illustration_114360-3454.jpg';
+            highResImage.onload = () => setBgImage(highResImage.src); // Only set the high-res image once it's fully loaded
+
             observer.disconnect(); // Stop observing after the image is loaded
           }
         });
@@ -27,13 +30,15 @@ const StudyMaterial = ({ title, target }) => {
   }, []);
 
   return (
-    <div className="study-material relative text-center text-[#2E6982] p-8 overflow-hidden rounded-xl ">
+    <div className="study-material relative text-center text-[#2E6982] p-8 overflow-hidden rounded-xl">
       {/* Lazy loaded Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-40 z-0 rounded-xl"
         style={{
-          backgroundImage: bgImage ? `url(${bgImage})` : 'none',
-          border: '1px solid #2e6982'
+          backgroundImage: bgImage ? `url(${bgImage})` : `url(${lowResImage})`,
+          filter: bgImage ? 'none' : 'blur(5px)', // Blur effect on placeholder image
+          transition: 'filter 0.5s ease-in-out', // Smooth transition to the high-res image
+          border: '1px solid #2e6982',
         }}
       ></div>
 
