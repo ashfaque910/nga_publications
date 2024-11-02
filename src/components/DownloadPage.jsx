@@ -11,8 +11,8 @@ const DownloadPage = () => {
 
   return (
     <>
-    <div className="download-page flex justify-center items-center"> {/* Removed top and bottom padding on large devices */}
-      <div className="download-container border border-[#2E6982] rounded-lg p-6 max-w-lg w-full shadow-lg" style={{borderRadius: 'var(--border-radius)'}}>
+    <div className="download-page flex justify-center items-center my-8 py-8"> {/* Removed top and bottom padding on large devices */}
+      <div className="download-container border border-[#2E6982] rounded-lg p-12 max-w-lg w-full shadow-lg" style={{borderRadius: 'var(--border-radius)'}}>
         <h1 className="download-title text-xl sm:text-2xl lg:text-3xl font-semibold mb-4 text-center">
           {fileTitle}
         </h1>

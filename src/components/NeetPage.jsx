@@ -7,20 +7,20 @@ const NeetPage = () => {
   return (
     <>
       <div className="text-center text-3xl sm:text-base md:text-xl lg:text-2xl xl:text-4xl py-6 text-yellow-400">
-        <h1>NEET | UG</h1>
+        <h1>NEET - UG</h1>
       </div>
-      <div className="common-container">
+      <div className="common-container mb-4 ">
         <div className="common-content">
           {/* NEET Study Material */}
           <div className="common-study-material">
             {/* StudyMaterial Component with navigation */}
             <StudyMaterial
               title="NEET Study Material"
-              target="/neet/neet-study-material" 
+              target="/neet/neet-study-material"
               description="Our NEET study material, officially endorsed by the college, provides everything students need to excel in their exams."
             />
           </div>
-         
+
           {/* NEET Test Series */}
           <div className="common-test-series">
             <TestSeries
@@ -38,6 +38,9 @@ const NeetPage = () => {
               className="download-link"
             >
               Neet Test Series (Track Sheet)
+            </Link>
+            <Link to="/neet/sample-test" className="download-link">
+              NEET Sample Test Paper
             </Link>
           </div>
         </div>

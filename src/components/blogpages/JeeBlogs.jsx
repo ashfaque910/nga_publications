@@ -1,123 +1,94 @@
-import React from "react";
+import React from 'react';
 
 function JeeBlogs() {
   return (
     <>
       <div className="space-y-12 animate-fade-in">
-        {/* JEE Main 2025 content */}
+        {/* JEE Main 2025 Header */}
         <section className="text-center space-y-4">
-          <h1 className="text-3xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold mb-4 sm:mb-6 md:mb-8 text-[#2E6982]">
-            JEE Main 2025: Exam Dates, Syllabus & More
-          </h1>
-          <p className="text-gray-600 text-sm sm:text-base md:text-md lg:text-xl">
-            Get all the latest updates on JEE Main 2025...
-          </p>
-          <div className="flex justify-center space-x-6 mt-6">
-            <button className="px-6 py-3 bg-[#2E6982] text-white rounded-full hover:bg-[#225160] transition-transform duration-300 transform hover:scale-105">
-              Start Preparing
-            </button>
-          </div>
+          <h1 className="text-3xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold mb-4 sm:mb-6 md:mb-8 text-[#2E6982]">JEE Main 2025 Exam Pattern (Revised)</h1>
+          <p className="text-gray-600 text-sm sm:text-base md:text-md lg:text-xl">New Paper Pattern, Total Marks, Number of Questions</p>
         </section>
 
-        {/* JEE Main 2025 Overview */}
+        {/* Exam Pattern Overview */}
         <section className="space-y-4">
-          <h2 className="text-2xl sm:text-xl md:text-2xl lg:text-2xl font-bold text-[#2E6982]">
-            Overview
-          </h2>
+          <h2 className="text-2xl font-semibold sm:text-xl md:text-2xl lg:text-2xl text-[#2E6982]">Exam Pattern Overview</h2>
           <p className="text-gray-600 text-sm sm:text-base md:text-md lg:text-xl">
-            JEE Main 2025 is one of the most important entrance exams for
-            students aspiring to pursue engineering at premier institutions like
-            the IITs, NITs, and other top engineering colleges across India. The
-            exam is conducted by NTA (National Testing Agency), and the first
-            session is expected in January 2025.
+            The JEE Main 2025 exam pattern has been revised by NTA, removing optional questions in Section B for Papers 1 and 2. The B.E/B.Tech exam will consist of 75 questions covering Physics, Chemistry, and Mathematics, totaling 300 marks. Each section will have 25 questions, including 20 multiple-choice questions (MCQs) and 5 numerical value questions (NVQs), all mandatory.
+          </p>
+          <p className="text-gray-600 text-sm sm:text-base md:text-md lg:text-xl">
+            The exam will be conducted in two sessions: January 22-31 and April 1-8, 2025. The JEE exam pattern varies for Paper 1 (B.E/B.Tech) and Paper 2 (B.Arch/B.Plan). Check below for more details.
           </p>
         </section>
 
-        {/* JEE Main 2025 Important Dates */}
+        {/* Detailed Exam Pattern Table */}
         <section className="space-y-4">
-          <h2 className="text-2xl sm:text-xl md:text-2xl lg:text-2xl font-bold text-[#2E6982]">
-            Important Dates (Tentative)
-          </h2>
+          <h2 className="text-2xl font-semibold sm:text-xl md:text-2xl lg:text-2xl text-[#2E6982]">Detailed Exam Pattern</h2>
           <table className="w-full text-left border-collapse">
             <thead>
               <tr>
-                <th className="border-b-2 py-2">Event</th>
-                <th className="border-b-2 py-2">Date 2025</th>
+                <th className="border-b-2 py-2">Paper</th>
+                <th className="border-b-2 py-2">Subjects</th>
+                <th className="border-b-2 py-2">Question Format</th>
+                <th className="border-b-2 py-2 ">Total Questions</th>
+                <th className="border-b-2 py-2">Total Marks</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td className="border-b py-2">Release of Application</td>
-                <td className="border-b py-2">1st week of November 2024</td>
+                <td className="border-b py-2">B.E/B.Tech (Paper 1)</td>
+                <td className="border-b py-2">Maths, Physics, Chemistry</td>
+                <td className="border-b py-2">MCQs + Numerical Value Questions</td>
+                <td className="border-b py-2">75 (25 per subject)</td>
+                <td className="border-b py-2">300</td>
               </tr>
               <tr>
-                <td className="border-b py-2">
-                  End of the application process
-                </td>
-                <td className="border-b py-2">Last week of November 2024</td>
+                <td className="border-b py-2">B.Arch (Paper 2A)</td>
+                <td className="border-b py-2">Maths, Aptitude, Drawing</td>
+                <td className="border-b py-2">MCQs + Drawing Questions</td>
+                <td className="border-b py-2">82</td>
+                <td className="border-b py-2">400</td>
               </tr>
               <tr>
-                <td className="border-b py-2">Correction window opens</td>
-                <td className="border-b py-2">2nd week of December 2024</td>
-              </tr>
-              <tr>
-                <td className="border-b py-2">JEE Main Session 1 Exam</td>
-                <td className="border-b py-2">3rd week of January 2025</td>
-              </tr>
-              <tr>
-                <td className="border-b py-2">JEE Main Session 2 Exam</td>
-                <td className="border-b py-2">2nd week of April 2025</td>
+                <td className="border-b py-2">B.Plan (Paper 2B)</td>
+                <td className="border-b py-2">Maths, Aptitude, Planning</td>
+                <td className="border-b py-2">MCQs + Numerical Value Questions</td>
+                <td className="border-b py-2">100</td>
+                <td className="border-b py-2">400</td>
               </tr>
             </tbody>
           </table>
         </section>
 
-        {/* JEE Main 2025 Eligibility */}
+        {/* Marking Scheme */}
         <section className="space-y-4">
-          <h2 className="text-2xl sm:text-xl md:text-2xl lg:text-2xl font-bold text-[#2E6982]">
-            Eligibility Criteria
-          </h2>
-          <ul className="list-disc list-inside text-gray-600 text-sm sm:text-base md:text-md lg:text-xl">
-            <li>
-              <strong>Nationality:</strong> Indian Nationals, NRIs, PIO, OCI,
-              and Foreign Nationals are eligible.
-            </li>
-            <li>
-              <strong>Age Limit:</strong> No age limit for candidates applying
-              for JEE Main 2025.
-            </li>
-            <li>
-              <strong>Qualification:</strong> Candidates must have passed their
-              12th standard in 2023, 2024, or will appear in 2025.
-            </li>
-          </ul>
-        </section>
-
-        {/* JEE Main 2025 Application Process */}
-        <section className="space-y-4">
-          <h2 className="text-2xl sm:text-xl md:text-2xl lg:text-2xl font-bold text-[#2E6982]">
-            Application Form
-          </h2>
+          <h2 className="text-2xl font-semibold sm:text-xl md:text-2xl lg:text-2xl text-[#2E6982]">Marking Scheme</h2>
           <p className="text-gray-600 text-sm sm:text-base md:text-md lg:text-xl">
-            The JEE Main 2025 application process will be online, starting from
-            November 2024. Follow these steps to apply: Register → Fill in
-            personal, academic details → Upload documents → Pay fees → Submit
-            application form. The correction window will be available in
-            December 2024.
+            For MCQs, candidates earn 4 marks for each correct answer, with a penalty of -1 for incorrect answers. Numerical value questions follow the same marking scheme. Drawing questions in B.Arch are evaluated out of 100 marks each, with no negative marking.
           </p>
         </section>
 
-        {/* JEE Main 2025 Syllabus */}
+        {/* Syllabus */}
         <section className="space-y-4">
-          <h2 className="text-2xl sm:text-xl md:text-2xl lg:text-2xl font-bold text-[#2E6982]">
-            Syllabus
-          </h2>
+          <h2 className="text-2xl font-semibold sm:text-xl md:text-2xl lg:text-2xl text-[#2E6982]">JEE Main 2025 Syllabus</h2>
           <p className="text-gray-600 text-sm sm:text-base md:text-md lg:text-xl">
-            JEE Main syllabus includes three major subjects: Physics, Chemistry,
-            and Mathematics. The syllabus is based on 11th and 12th class topics
-            as per CBSE standards. The exam is divided into two papers: Paper 1
-            for engineering courses and Paper 2 for architecture and planning
-            courses.
+            The National Testing Agency has released the JEE Main 2025 syllabus on the official website, jeemain.nta.nic.in. Students appearing for the entrance test should familiarize themselves with the JEE Mains syllabus to create an effective study plan. Important topics in Physics, Chemistry, and Mathematics are covered in the syllabus.
+          </p>
+        </section>
+
+        {/* Mock Test */}
+        <section className="space-y-4">
+          <h2 className="text-2xl font-semibold sm:text-xl md:text-2xl lg:text-2xl text-[#2E6982]">JEE Main 2025 Mock Test</h2>
+          <p className="text-gray-600 text-sm sm:text-base md:text-md lg:text-xl">
+            The exam authority will release the JEE Main Mock Test 2025 on the official website. The mock test is designed to simulate the real exam environment, covering questions from Physics, Chemistry, and Mathematics to help students evaluate their performance, identify weak areas, and improve exam strategies.
+          </p>
+        </section>
+
+        {/* Sample Papers */}
+        <section className="space-y-4">
+          <h2 className="text-2xl font-semibold sm:text-xl md:text-2xl lg:text-2xl text-[#2E6982]">JEE Main 2025 Sample Papers</h2>
+          <p className="text-gray-600 text-sm sm:text-base md:text-md lg:text-xl">
+            Prepare for JEE Main 2025 with a comprehensive collection of sample papers. These papers are crafted to mirror the actual exam, helping students practice effectively and boost their confidence. By solving JEE Main Sample Papers, aspirants can gauge their readiness for the exam.
           </p>
         </section>
       </div>

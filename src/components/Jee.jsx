@@ -7,9 +7,9 @@ const Jee = () => {
   return (
     <>
     <div className="text-center text-3xl sm:text-base md:text-xl lg:text-2xl xl:text-4xl py-6 text-yellow-400">
-    <h1>JEE | MAINS</h1>
-  </div>
-    <div className="common-container">
+    <h1>JEE - MAINS</h1>
+  </div> 
+    <div className="common-container mb-4">
       <div className="common-content">
         {/* JEE Study Material */}
         <div className="common-study-material">
@@ -32,6 +32,9 @@ const Jee = () => {
           <Link to="/download/JEE-PT,MT,FST,GT.pdf?title=JEE - PT, MT, FST, GT" className="download-link">
           JEE - MAINS Test Series (Track Sheet)
           </Link>
+          <Link to="/jee/sample-test" className="download-link">
+  Jee - Mains Sample Test Paper
+</Link>
         </div>
       </div>
     </div>

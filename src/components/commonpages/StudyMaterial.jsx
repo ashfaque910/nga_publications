@@ -30,7 +30,7 @@ const StudyMaterial = ({ title, target }) => {
   }, []);
 
   return (
-    <div className="study-material relative text-center text-[#2E6982] p-8 overflow-hidden rounded-xl">
+    <div className="study-material relative text-center text-[#2E6982] p-16 overflow-hidden rounded-xl">
       {/* Lazy loaded Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-40 z-0 rounded-xl"

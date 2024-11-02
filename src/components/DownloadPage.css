@@ -58,3 +58,5 @@
   background-color: var(--button-hover-bg, #155ab2); /* Hover effect aligned with theme */
 }
 
+/* Ensures footer sticks to the bottom when content is short */
+
