@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import StudyMaterial from "./commonpages/StudyMaterial";
 import TestSeries from "./commonpages/TestSeries";
+import WhyChooseUs from "./WhyChooseUs";
 
 const Kcet = () => {
   return (
@@ -17,7 +18,6 @@ const Kcet = () => {
               title="KCET Study Material"
               target="/kcet/kcet-study-material"
             />
-            {/* <DownloadPage nextRoute="/download/KCET-test-series.pdf?title=KCET Test Series" /> */}
           </div>
 
           {/* KCET Test Series */}
@@ -44,6 +44,7 @@ const Kcet = () => {
           </div>
         </div>
       </div>
+      <WhyChooseUs/>
     </>
   );
 };

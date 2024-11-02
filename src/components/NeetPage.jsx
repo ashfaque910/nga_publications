@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import StudyMaterial from "./commonpages/StudyMaterial";
 import TestSeries from "./commonpages/TestSeries";
+import WhyChooseUs from "./WhyChooseUs";
 
 const NeetPage = () => {
   return (
@@ -45,6 +46,7 @@ const NeetPage = () => {
           </div>
         </div>
       </div>
+      <WhyChooseUs/>
     </>
   );
 };

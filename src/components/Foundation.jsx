@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import StudyMaterial from "./commonpages/StudyMaterial";
 import TestSeries from "./commonpages/TestSeries";
+import WhyChooseUs from "./WhyChooseUs";
 
 const Kcet = () => {
   return (
@@ -17,7 +18,6 @@ const Kcet = () => {
               title="Foundation Study Material"
               target="/foundation/foundation-study-material"
             />
-            {/* <DownloadPage nextRoute="/download/KCET-test-series.pdf?title=KCET Test Series" /> */}
           </div>
 
           {/* KCET Test Series */}
@@ -26,8 +26,8 @@ const Kcet = () => {
               title="Foundation Test Series"
               description="Join the Foundation test series to prepare for the exam."
             />
-            <div className="py-10">
-              <div className="pb-4">
+            <div className="pt-10">
+              <div className="pb-2">
                 <Link
                   to="/download/Foundation6to10(2025).pdf?title=Foundation (6 to 10) 2025"
                   className="download-link "
@@ -35,7 +35,7 @@ const Kcet = () => {
                   Foundation ('6 to 10') Test Series
                 </Link>
               </div>
-              <div>
+              <div className="pt-4">
                 <Link to="/foundation/sample-test" className="download-link">
                   Foundation ('6 to 10') Sample Test Paper
                 </Link>
@@ -44,6 +44,7 @@ const Kcet = () => {
           </div>
         </div>
       </div>
+      <WhyChooseUs/>
     </>
   );
 };

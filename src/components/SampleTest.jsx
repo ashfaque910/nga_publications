@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import WhyChooseUs from './WhyChooseUs';
 import "./SampleTest.css"; // Custom styles for SampleTestPage
 
 const SampleTest = ({ exam }) => {
@@ -33,6 +34,7 @@ const SampleTest = ({ exam }) => {
   };
 
   return (
+    <>
     <div className="sample-test-page flex justify-center items-center mb-8">
       <div className="sample-container border rounded-lg p-6 max-w-lg w-full shadow-lg">
         <h1 className="sample-title text-xl sm:text-2xl lg:text-3xl font-semibold mb-4 text-center">
@@ -54,6 +56,8 @@ const SampleTest = ({ exam }) => {
         </div>
       </div>
     </div>
+    <WhyChooseUs/>
+    </>
   );
 };
 

@@ -31,7 +31,7 @@ const DownloadPage = () => {
         </div>
       </div>
     </div>
-    <WhyChooseUs/>
+ 
     </>
   );
 };
