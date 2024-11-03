@@ -83,8 +83,8 @@ const Contact = () => {
     }
 
     setLoading(true);
-    const serviceId = "service_txi78pc";
-    const templateId = "template_6ikpk9d";
+    const serviceId = "service_nmccawu";
+    const templateId = "template_wp5ilae";
     const publicKey = "GgmW3_k4spqph1gOu";
 
     emailjs

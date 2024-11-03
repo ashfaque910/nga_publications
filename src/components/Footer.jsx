@@ -2,9 +2,8 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faInstagram,
-  faLinkedin,
+  faYoutube,
   faFacebook,
-  faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import logo from "../assets/logo-2.jpg"
 
@@ -18,18 +17,16 @@ const Footer = () => {
           <img src={logo} alt="Company Logo" className="rounded-full h-16 w-16 md:h-14 md:w-14 xl:h-20 xl:w-20 mr-2 " />
        
           <div className="social-links flex space-x-4 mt-4">
-            <a href="#" className="hover:text-white">
+            <a href="https://www.instagram.com/nga_publication?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" className="hover:text-white">
               <FontAwesomeIcon icon={faInstagram} size="lg" />
             </a>
-            <a href="#" className="hover:text-white">
-              <FontAwesomeIcon icon={faLinkedin} size="lg" />
+            <a href="https://www.youtube.com/channel/UCGnjy6eQJJnqpjxj5sk009g" target="_blank" className="hover:text-white">
+              <FontAwesomeIcon icon={faYoutube} size="lg" />
             </a>
-            <a href="#" className="hover:text-white">
+            <a href="https://www.facebook.com/people/Nga-Publication/61568347942979/" target="_blank" className="hover:text-white">
               <FontAwesomeIcon icon={faFacebook} size="lg" />
             </a>
-            <a href="#" className="hover:text-white">
-              <FontAwesomeIcon icon={faTwitter} size="lg" />
-            </a>
+           
           </div>
         </div>
 
